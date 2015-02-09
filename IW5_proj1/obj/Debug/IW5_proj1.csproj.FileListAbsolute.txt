@@ -1,0 +1,6 @@
+C:\Users\Tom\Documents\Visual Studio 2013\Projects\IW5_proj1\IW5_proj1\bin\Debug\IW5_proj1.exe.config
+C:\Users\Tom\Documents\Visual Studio 2013\Projects\IW5_proj1\IW5_proj1\bin\Debug\IW5_proj1.exe
+C:\Users\Tom\Documents\Visual Studio 2013\Projects\IW5_proj1\IW5_proj1\bin\Debug\IW5_proj1.pdb
+C:\Users\Tom\Documents\Visual Studio 2013\Projects\IW5_proj1\IW5_proj1\obj\Debug\IW5_proj1.csprojResolveAssemblyReference.cache
+C:\Users\Tom\Documents\Visual Studio 2013\Projects\IW5_proj1\IW5_proj1\obj\Debug\IW5_proj1.exe
+C:\Users\Tom\Documents\Visual Studio 2013\Projects\IW5_proj1\IW5_proj1\obj\Debug\IW5_proj1.pdb

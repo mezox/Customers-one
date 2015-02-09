@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="IW5_proj1.XMLWorker&lt;T&gt;">
+    <Position X="2.75" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAACAAACAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>XMLworker.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IWorker" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.304" />
+  </Class>
+  <Class Name="IW5_proj1.CustomersCollection">
+    <Position X="10.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PersonInfo\Person.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Person" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="IW5_proj1.Person">
+    <Position X="10.75" Y="2.25" Width="2" />
+    <NestedTypes>
+      <Enum Name="IW5_proj1.Person.T_Sex" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PersonInfo\Person.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAgAAAAAAAAQABAAAAEQAAABgAAAAAAA=</HashCode>
+      <FileName>PersonInfo\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IW5_proj1.Address">
+    <Position X="13.5" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAgBAAAAAAAAAQAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>PersonInfo\Address.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Person" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="IW5_proj1.Program">
+    <Position X="6" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IW5_proj1.IWorker&lt;T&gt;">
+    <Position X="0.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IWorker.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

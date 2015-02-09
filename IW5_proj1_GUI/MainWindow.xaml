@@ -1,0 +1,160 @@
+﻿<Window x:Class="IW5_proj1_GUI.CustomerList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Customer List"
+        Height="523"
+        Width="910" MinWidth="920" MinHeight="300">
+
+    <Grid>
+        <!-- Menu -->
+        <Menu>
+            <MenuItem Header="_File">
+                <MenuItem Name="fileMenuItemOpen" Header="_Open..." Click="fileMenuItemOpen_Click" />
+                <Separator />
+                <MenuItem Name="fileMenuItemSave" Header="_Save" Click="fileMenuItemSave_Click"/>
+                <MenuItem Name="fileMenuItemSaveAs" Header="_Save As..." Click="fileMenuItemSaveAs_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <!-- Customer list -->
+        <ListView Margin="10,31,85,81" x:Name="customersFromFile" SelectionMode="Single" SelectionChanged="customersFromFile_SelectionChanged" HorizontalContentAlignment="Stretch">
+            <ListView.View>
+                <GridView>
+                    <!-- ID column -->
+                    <GridViewColumn Header="ID" Width="40">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock x:Name="cellID" Text="{Binding m_id}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <!-- Name column -->
+                    <GridViewColumn Header="Name" Width="80">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock x:Name="cellName" Text="{Binding Name}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <!-- Surname column -->
+                    <GridViewColumn Header="Surname" Width="80">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock x:Name="cellSurname" Text="{Binding Surname}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <!-- Sex column -->
+                    <GridViewColumn Header="Sex" Width="80">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock x:Name="cellSex" Text="{Binding m_sex}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <!-- Age column -->
+                    <GridViewColumn Header="Age" Width="40">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock x:Name="cellAge" Text="{Binding m_age}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <!-- Street column -->
+                    <GridViewColumn Header="Street" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock x:Name="cellStreet" Text="{Binding m_address.m_street}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <!-- City column -->
+                    <GridViewColumn Header="City" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock x:Name="cellCity" Text="{Binding m_address.m_city}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <!-- City column -->
+                    <GridViewColumn Header="Zipcode" Width="60">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock x:Name="cellZipcode" Text="{Binding m_address.m_zipcode}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <!-- City column -->
+                    <GridViewColumn Header="Country" Width="80">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock x:Name="cellCountry" Text="{Binding m_address.m_country}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <!-- Check for delete column -->
+                    <GridViewColumn Header="" Width="40">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox Name="checkBoxDelete" IsChecked="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListViewItem}}, Path=IsSelected}" Checked="checkBoxDelete_Checked" Unchecked="checkBoxDelete_Unchecked"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+
+        <!-- Add new customer section -->
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="35,0,0,10" Name="txtBoxAddName" VerticalAlignment="Bottom" Width="75" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="115,0,0,9" Name="txtBoxAddSurName" VerticalAlignment="Bottom" Width="70" />
+        <ComboBox Width="70" Height="25" Margin="190,0,0,10" Name="comboBoxAddSex" VerticalAlignment="Bottom" HorizontalAlignment="Left" SelectedIndex="0">
+            <ComboBoxItem Content="Male" Name="comboBoxMale" />
+            <ComboBoxItem Content="Female" Name="comboBoxFemale" />
+        </ComboBox>
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="265,0,0,10" Name="txtBoxAddAge" VerticalAlignment="Bottom" Width="30" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="300,0,0,10" Name="txtBoxAddStreet" VerticalAlignment="Bottom" Width="145" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="450,0,0,10" Name="txtBoxAddCity" VerticalAlignment="Bottom" Width="145" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="600,0,0,10" Name="txtBoxAddZipcode" VerticalAlignment="Bottom" Width="60" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="665,0,0,10" Name="txtBoxAddCountry" VerticalAlignment="Bottom" Width="75" />
+
+        <Button Height="25" Margin="0,0,80,10" Name="buttonAddCustomer" VerticalAlignment="Bottom" HorizontalAlignment="right" Width="65" Click="buttonAddCustomer_Click" Content="Add"/>
+        <Button Height="25" Margin="0,0,10,10" Name="buttonReset" VerticalAlignment="Bottom" HorizontalAlignment="right" Width="65" Click="buttonReset_Click" Content="Reset"/>
+
+        <Button Height="45" Name="buttonClear" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="67" Click="buttonClear_Click" Margin="0,0,10,134" RenderTransformOrigin="0.478,-0.089" Content="Clear File"/>
+        <Button Height="45" Name="buttonDelete" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="67" Click="buttonDelete_Click" Margin="0,0,9,80" RenderTransformOrigin="0.478,-0.089" Content="Delete" HorizontalContentAlignment="Center"/>
+
+        <Label Name="labelName" Content="Name" HorizontalAlignment="Left"  Margin="35,0,0,30" VerticalAlignment="Bottom"/>
+        <Label Name="labelSurName" Content="Surname" HorizontalAlignment="Left"  Margin="115,0,0,30" VerticalAlignment="Bottom"/>
+        <Label Name="labelSex" Content="Sex" HorizontalAlignment="Left"  Margin="190,0,0,30" VerticalAlignment="Bottom"/>
+        <Label Name="labelAge" Content="Age" HorizontalAlignment="Left"  Margin="265,0,0,30" VerticalAlignment="Bottom"/>
+        <Label Name="labelStreet" Content="Street" HorizontalAlignment="Left"  Margin="300,0,0,30" VerticalAlignment="Bottom"/>
+        <Label Name="labelCity" Content="City" HorizontalAlignment="Left"  Margin="450,0,0,30" VerticalAlignment="Bottom"/>
+        <Label Name="labelZipcode" Content="Zipcode" HorizontalAlignment="Left"  Margin="600,0,0,30" VerticalAlignment="Bottom"/>
+        <Label Name="labelCountry" Content="Country" HorizontalAlignment="Left"  Margin="665,0,0,30" VerticalAlignment="Bottom"/>
+
+        <Label Name ="labValidate" Content="" HorizontalAlignment="Left"  Margin="200,0,0,50" VerticalAlignment="Bottom" Visibility="Visible" Foreground="Red"/>
+
+
+        <RadioButton Name="rbtnEdit" Content="Edit" HorizontalAlignment="Right"  Margin="60,0,100,50" VerticalAlignment="Bottom" IsChecked="False" Click="rbtnEdit_Click"/>
+        <RadioButton Name="rbtnAdd" Content="Add" HorizontalAlignment="Right" Margin="120,0,40,50" VerticalAlignment="Bottom" IsChecked="True" Click="rbtnAdd_Click"/>
+        <CheckBox Name="checkBoxMultiSelect" HorizontalAlignment="Right" Margin="0,250,10,0" VerticalAlignment="Top" Checked="checkBoxMultiSelect_Checked" IsChecked="False" Unchecked="checkBoxMultiSelect_Unchecked">
+            <TextBlock TextWrapping="Wrap" Width="50">
+                Multiple selection mode
+            </TextBlock>
+        </CheckBox>
+
+
+    </Grid>
+</Window>

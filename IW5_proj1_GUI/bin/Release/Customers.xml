@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="utf-8"?><ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Person><Sex>Male</Sex><Age>21</Age><Address><Street>Lounska 629/3</Street><City>Liptovsky Mikulas</City><Zipcode>03104</Zipcode><Country>Slovakia</Country></Address></Person></ArrayOfPerson>
